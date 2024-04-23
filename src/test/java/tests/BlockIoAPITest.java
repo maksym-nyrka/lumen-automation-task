@@ -24,7 +24,7 @@ public class BlockIoAPITest {
         address = "2N3P9jAr9kbiNpovFDr6Po3xDo6NZqhot4b";
     }
 
-    @Test(enabled = false)
+    @Test
     public void testGetNewAddress() {
         String label = "myaddress" + Utils.generateRandomNumber();
 

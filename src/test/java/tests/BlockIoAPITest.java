@@ -1,8 +1,11 @@
+package tests;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import utils.Utils;
 
 import java.util.Map;
 
@@ -23,7 +26,7 @@ public class BlockIoAPITest {
 
     @Test(enabled = false)
     public void testGetNewAddress() {
-        String label = "myaddress4";
+        String label = "myaddress" + Utils.generateRandomNumber();
 
         Response response = given()
                 .queryParam("api_key", apiKey)
